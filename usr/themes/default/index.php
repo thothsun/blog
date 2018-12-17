@@ -1,11 +1,11 @@
 <?php
 /**
- * 这是 Typecho 0.9 系统的一套默认皮肤
+ * 这是由 SunShuai 设计的一套自定义皮肤
  * 
- * @package Typecho Replica Theme 
- * @author Typecho Team
- * @version 1.2
- * @link http://typecho.org
+ * @package SunShuai Custom Theme
+ * @author SunShuai
+ * @version 1.0
+ * @link http://ai-developer.net
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
