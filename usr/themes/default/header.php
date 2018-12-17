@@ -35,37 +35,41 @@
 
 <header id="header" class="clearfix">
     <div class="container">
-        <div class="row">
-            <div class="site-name col-mb-12 col-9">
-                <?php if ($this->options->logoUrl): ?>
-                    <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                        <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>"/>
-                    </a>
-                <?php else: ?>
-                    <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-                    <p class="description"><?php $this->options->description() ?></p>
-                <?php endif; ?>
-            </div>
-            <div class="site-search col-3 kit-hidden-tb">
-                <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                    <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>"/>
-                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                </form>
-            </div>
-            <div class="col-mb-12" >
-                <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a<?php if ($this->is('index')): ?> class="current"<?php endif; ?>
-                            href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
-                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                    <?php while ($pages->next()): ?>
-                        <a<?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
-                                href="<?php $pages->permalink(); ?>"
-                                title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                    <?php endwhile; ?>
-                </nav>
-            </div>
-        </div><!-- end .row -->
+        <div style="display:inline-block;float: left">
+            <?php if ($this->options->logoUrl): ?>
+                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>"/>
+                </a>
+            <?php else: ?>
+                <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+                <p class="description"><?php $this->options->description() ?></p>
+            <?php endif; ?>
+        </div>
+
+
+        <div style="display:inline-block;margin-left: 50px">
+            <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
+                <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索文章'); ?>"/>
+                <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+            </form>
+        </div>
+
+
+        <div style="width: 100%;margin-top: 50px">
+            <nav id="nav-menu" class="clearfix" role="navigation">
+                <a<?php if ($this->is('index')): ?> class="current"<?php endif; ?>
+                        href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+                <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+                <?php while ($pages->next()): ?>
+                    <a<?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
+                            href="<?php $pages->permalink(); ?>"
+                            title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                <?php endwhile; ?>
+            </nav>
+        </div>
+
+
     </div>
 </header><!-- end #header -->
 <div id="body">
