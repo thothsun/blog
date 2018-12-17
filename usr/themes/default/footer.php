@@ -9,7 +9,10 @@
     <?php _e('All rights reserved.'); ?>
 
     <br/>
-    <?php _e('Powered by Typecho. Theme by SunShuai.'); ?>
+    <?php _e('Powered by <a href="http://www.typecho.org">Typecho</a>'); ?>.
+    <?php _e('Theme by <a href="https://github.com/Sun-Shuai/blog">SunShuai</a>'); ?>.
+
+
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
