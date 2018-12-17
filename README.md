@@ -1,0 +1,1 @@
+A blog based on typecho.
