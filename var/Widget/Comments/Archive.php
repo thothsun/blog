@@ -410,7 +410,7 @@ class Widget_Comments_Archive extends Widget_Abstract_Comments
             'dateFormat'    =>  $this->options->commentDateFormat,
             'replyWord'     =>  _t('回复'),
             'commentStatus' =>  _t('您的评论正等待审核！'),
-            'avatarSize'    =>  32,
+            'avatarSize'    =>  28,
             'defaultAvatar' =>  NULL
         ));
         $this->pluginHandle()->trigger($plugged)->listComments($this->_singleCommentOptions, $this);
