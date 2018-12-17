@@ -1,7 +1,7 @@
 body {
     background-color: #FFF;
     color: #444;
-    font-family: "Droid Serif", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei", "Microsoft Yahei", serif;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Droid Serif", Georgia, "Times New Roman", "Source Han Sans CN", "WenQuanYi Micro Hei", "Microsoft Yahei", serif;
     font-size: 87.5%;
 }
 
@@ -58,7 +58,7 @@ table th {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+    font-family: "PingFang SC", "Hiragino Sans GB","Helvetica Neue", Helvetica, Arial,  "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
 }
 
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], textarea {
