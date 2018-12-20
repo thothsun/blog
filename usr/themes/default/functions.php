@@ -24,3 +24,8 @@ function themeFields($layout) {
 }
 */
 
+function themeInit($archive) {
+    if ($archive->is('index')) {
+        $archive->parameter->pageSize = 10;
+    }
+}
