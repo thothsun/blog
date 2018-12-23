@@ -60,8 +60,20 @@
 
             <div class="col-mb-12">
                 <nav id="nav-menu" class="clearfix" role="navigation">
+
                     <a<?php if ($this->is('index')): ?> class="current"<?php endif; ?>
                             href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+
+                    <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+                    <?php while ($category->next()): ?>
+                        <a<?php if ($this->is('page', $category->slug)): ?> class="current"<?php endif; ?>
+                                href="<?php $category->permalink(); ?>"
+                                title="<?php $category->name(); ?>"><?php $category->name() ?>
+                        </a>
+
+
+                    <?php endwhile; ?>
+
                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                     <?php while ($pages->next()): ?>
                         <a<?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
