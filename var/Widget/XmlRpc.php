@@ -306,7 +306,7 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
 
     /**
      * 获取pageId指定的page
-     * about wp xmlrpc api, you can see http://codex.wordpress.org/XML-RPC
+     * about wp xmlrpc live2d_api, you can see http://codex.wordpress.org/XML-RPC
      *
      * @param int $blogId
      * @param int $pageId
@@ -2217,10 +2217,10 @@ class Widget_XmlRpc extends Widget_Abstract_Contents implements Widget_Interface
         <engineLink>http://www.typecho.org/</engineLink>
         <homePageLink>{$this->options->siteUrl}</homePageLink>
         <apis>
-            <api name="WordPress" blogID="1" preferred="true" apiLink="{$this->options->xmlRpcUrl}" />
-            <api name="Movable Type" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
-            <api name="MetaWeblog" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
-            <api name="Blogger" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
+            <live2d_api name="WordPress" blogID="1" preferred="true" apiLink="{$this->options->xmlRpcUrl}" />
+            <live2d_api name="Movable Type" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
+            <live2d_api name="MetaWeblog" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
+            <live2d_api name="Blogger" blogID="1" preferred="false" apiLink="{$this->options->xmlRpcUrl}" />
         </apis>
     </service>
 </rsd>
